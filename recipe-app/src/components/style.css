@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#header {
+    display: flex;
+    background-color: black; 
+    align-items: center;
+    font-family: 'EG Garamond', serif; 
+    justify-content: space-between;
+    height: 60px;
+}
+
+#header .title {
+    margin: 0;
+    color: white;
+    padding: 0 1.5rem;  
+}
+
+#header .auth-buttons button {
+    border: none;
+    color: white; 
+    background-color: black; 
+    font-family: 'EG Garamond', serif;
+    padding: 0 1.5rem; 
+    cursor: pointer; 
+}
+
+#header .auth-buttons button:hover {
+    opacity: 0.7;
+}
