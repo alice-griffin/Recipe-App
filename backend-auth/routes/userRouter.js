@@ -114,5 +114,10 @@ router.post("/tokenIsValid", async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 })
+//get a currently logged in user, to use on frontend
+router.get("/", auth, async (req, res) => {
+    const user = User.findById(req.user);
+    res.json({displayName: user.displayName, id: user._id});
+})
 
 module.exports = router;

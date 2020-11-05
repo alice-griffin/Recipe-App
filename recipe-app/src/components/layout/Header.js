@@ -6,7 +6,7 @@ export default function Header() {
 
     return(
         <header id="header">
-            <Link to="/"><h1 className="title">Recipes</h1></Link>
+            <Link to="/"><h1 className="title">treat wise</h1></Link>
             <AuthOptions />
         </header>
     )
