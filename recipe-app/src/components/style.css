@@ -41,3 +41,8 @@ ul {
 #header .auth-buttons button:hover {
     opacity: 0.7;
 }
+
+.register {
+    display: flex;
+    flex-direction: column;
+}
