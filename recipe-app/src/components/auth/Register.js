@@ -29,7 +29,7 @@ export default function Register() {
 
     return (
         <div className="Register">
-            <h1 className="get-started">Get Started</h1>
+            <h1 className="get-started">Sign up here.</h1>
             <div className="form-section">
                 <form onSubmit={submit} className="register-form">
                     <label htmlFor="register-email">Email</label>

@@ -12,6 +12,8 @@ ul {
     list-style: none;
 }
 
+/* header */
+
 #header {
     display: flex;
     background-color: black; 
@@ -23,7 +25,7 @@ ul {
 
 #header .title {
     margin: 0;
-    color: white;
+    color: white; 
     padding: 0 1.5rem;  
     font-size: 24px;
 }
@@ -42,7 +44,73 @@ ul {
     opacity: 0.7;
 }
 
+/* register screen */
+
 .register {
     display: flex;
     flex-direction: column;
+}
+
+/* login screen */
+
+.Login, .Register {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 100vh;
+    background-color: rgb(255, 212, 212)
+}
+
+.login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.Login .form-section {
+    background-color: white;
+    width: 90%;
+    border: 1px solid black; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    padding: 1rem; 
+    height: 300px;
+}
+
+.Register .form-section {
+    background-color: white;
+    width: 90%;
+    border: 1px solid black; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    padding: 1rem; 
+    height: 400px;
+}
+
+.Login input, .Register input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.Login label, .Register label {
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 2px;
+}
+
+.Login button, .Register button {
+    display: block;
+    border: none; 
+    background-color: black;
+    color: white; 
+    padding: 15px; 
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.Login h1, .Register h1 {
+    margin: 20px;
 }
