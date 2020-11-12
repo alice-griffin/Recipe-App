@@ -8,7 +8,7 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register'
 import Header from './components/layout/Header'
 import UserContext from './components/auth/UserContext';
-
+import SingleRecipe from './components/layout/SingleRecipe'
 
 
 function App() {
@@ -54,6 +54,7 @@ function App() {
             <Route exact path="/" component={Home}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/register" component={Register}></Route>
+            <Route patch="/details/:id" component={SingleRecipe}></Route>
           </Switch>
         </UserContext.Provider>
       </BrowserRouter>
