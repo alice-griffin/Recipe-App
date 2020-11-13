@@ -36,7 +36,7 @@ export default function Home () {
         if (!userData.user) {
             history.push("/login");
         }
-    }, [userData])
+    }, [])
 
     return (
         <div className="Home">
