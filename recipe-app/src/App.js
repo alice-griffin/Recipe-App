@@ -54,7 +54,7 @@ function App() {
             <Route exact path="/" component={Home}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/register" component={Register}></Route>
-            <Route patch="/details/:id" component={SingleRecipe}></Route>
+            <Route patch="/details/label" component={SingleRecipe}></Route>
           </Switch>
         </UserContext.Provider>
       </BrowserRouter>
