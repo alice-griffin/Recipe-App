@@ -1,27 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import Recipe from './Recipe';
+import React, { useEffect, useState } from "react";
 
-export default function Recipes(props) {
 
-    let recipes = []; 
+export default function Recipes({ homePageResults }) {
 
-    const validateRecipes = () => {
-        if (props.result.data === undefined) {
-            recipes = [];
-        } else {
-            recipes = props.result.data.hits;
-        }
-    }
-
-    validateRecipes()
-
-    console.log(recipes)
+    console.log(homePageResults)
 
     return (
         <div className="Recipes">
-          {recipes && recipes.map(recipe => (
-              <Recipe recipe={recipe} />
-          ))}
+            {homePageResults ? <div className="Recipes">
+                {homePageResults.hits.map((item) => (
+                    <div className="recipe">{item.recipe.label}</div>
+                ))}
+            </div> : <div>Loading...</div>}
         </div>
-    )
-}
+    );
+};

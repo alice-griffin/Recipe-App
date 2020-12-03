@@ -1,27 +1,26 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from "react";
+
+export default function Search({apiUrl, setHomePageResults, setSearchItem}) {
 
 
-export default function Search (props) {
+    const submitFormHandler = (e) => {
+        e.preventDefault();
+        fetch(apiUrl)
+        .then((res) => res.json())
+        .then((result) => {
+            setHomePageResults(result);
+        });}
 
-
-    const getSearchItem = (e) => {
-        let searchItem = e.target.value
-        return searchItem; 
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault(); 
-        props.getData(); 
-    }
 
     return (
         <div className="Search">
-
-            <form onSubmit={handleSubmit} className="search-form">
-            <input type="text" placeholder="Search Recipes" onChange={getSearchItem}/>
-            <button>Submit</button>
+            <form onSubmit={submitFormHandler} className="search-form">
+                <input
+                    type="text"
+                    placeholder="Search Recipes"
+                onChange={event => setSearchItem(event.target.value)}/>
+                <button>Submit</button>
             </form>
-
         </div>
-    )
+    );
 }
