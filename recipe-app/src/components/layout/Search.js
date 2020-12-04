@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-export default function Search({apiUrl, setHomePageResults, setSearchItem}) {
+export default function Search({ apiUrl, setHomePageResults, setSearchItem }) {
 
 
     const submitFormHandler = (e) => {
         e.preventDefault();
         fetch(apiUrl)
-        .then((res) => res.json())
-        .then((result) => {
-            setHomePageResults(result);
-        });}
+            .then((res) => res.json())
+            .then((result) => {
+                setHomePageResults(result);
+            });
+    }
 
 
     return (
@@ -18,7 +19,7 @@ export default function Search({apiUrl, setHomePageResults, setSearchItem}) {
                 <input
                     type="text"
                     placeholder="Search Recipes"
-                onChange={event => setSearchItem(event.target.value)}/>
+                    onChange={event => setSearchItem(event.target.value)} />
                 <button>Submit</button>
             </form>
         </div>
